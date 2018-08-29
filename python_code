@@ -41,7 +41,6 @@ with open('path', "r+") as f:
 
     for line in data:
         col0n.append(line.strip().split("|")[n-1]) #n is however many columns you are dealing, change the split dilineator situationally
- 
         
 #Create Pandas df from columns  
         
@@ -57,4 +56,3 @@ panda_sliced = panda.drop(list([0]))
 writer = ExcelWriter('destination of save')
 panda_sliced.to_excel(writer) #can add sheets here if needed
 writer.save()
-
